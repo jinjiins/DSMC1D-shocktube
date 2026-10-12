@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+  Molecular collision data for dsmc1d (model=vhs|vss species=<id>).
+  Source: Bird (1994), Molecular Gas Dynamics and the DSMC of Gas Flows,
+  Appendix A, Tables A1 (VHS) and A2 (VSS); Tref = 273 K.
+  Same content as SPARTA data/*.species + *.vss, one file per gas set.
+
+  mass [kg], diam [m], tref [K]; omega = viscosity-temperature exponent
+  (mu ~ T^omega); alpha = VSS scattering exponent (alpha = 1 -> VHS).
+  rotdof/vibdof are recorded for completeness; dsmc1d is monatomic (no
+  Larsen-Borgnakke yet), so rotdof > 0 only triggers a warning.
+-->
+<gasdata>
+  <species id="He" mass="6.65e-27" rotdof="0" vibdof="0">
+    <vhs diam="2.33e-10" omega="0.66" tref="273.0"/>
+    <vss diam="2.30e-10" omega="0.66" tref="273.0" alpha="1.26"/>
+  </species>
+  <species id="Ne" mass="3.35e-26" rotdof="0" vibdof="0">
+    <vhs diam="2.77e-10" omega="0.66" tref="273.0"/>
+    <vss diam="2.72e-10" omega="0.66" tref="273.0" alpha="1.31"/>
+  </species>
+  <species id="Ar" mass="6.63e-26" rotdof="0" vibdof="0">
+    <vhs diam="4.17e-10" omega="0.81" tref="273.0"/>
+    <vss diam="4.11e-10" omega="0.81" tref="273.0" alpha="1.40"/>
+  </species>
+  <species id="Kr" mass="1.391e-25" rotdof="0" vibdof="0">
+    <vhs diam="4.76e-10" omega="0.80" tref="273.0"/>
+    <vss diam="4.70e-10" omega="0.80" tref="273.0" alpha="1.32"/>
+  </species>
+  <species id="N2" mass="4.65e-26" rotdof="2" vibdof="2">
+    <vhs diam="4.17e-10" omega="0.74" tref="273.0"/>
+    <vss diam="4.11e-10" omega="0.74" tref="273.0" alpha="1.36"/>
+  </species>
+  <species id="O2" mass="5.312e-26" rotdof="2" vibdof="2">
+    <vhs diam="4.07e-10" omega="0.77" tref="273.0"/>
+    <vss diam="4.01e-10" omega="0.77" tref="273.0" alpha="1.40"/>
+  </species>
+</gasdata>
